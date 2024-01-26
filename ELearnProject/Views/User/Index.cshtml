@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete
+@model List<User>
+@{
+    ViewData["Title"] = "Kullanıcı İşlemleri";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Kullanıcı işlemleri burada yapılacak</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kullanıcı Id</th>
+        <th>Kullanıcı Adı</th>
+        <th>Sınav Ata</th>
+        <th>Detay Görüntüle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.UserId</td>
+            <td>@item.UserName</td>
+            <td><a href="/User/AssignmentExam/@item.UserId" class="btn btn-primary">Sınav Ata</a></td>
+            <td><a href="/User/UserDetails/@item.UserId" class="btn btn-success">Detay Görüntüle</a></td>
+        </tr>
+    }
+
+</table>
+

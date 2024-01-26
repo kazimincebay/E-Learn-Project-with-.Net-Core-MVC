@@ -1,0 +1,19 @@
+﻿@using EntityLayer.Concrete
+@model QuestionCategory
+@{
+    ViewData["Title"] = "Soru Kategorisi Ekle";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+@using (Html.BeginForm("AddQuestionCategory", "QuestionCategory", FormMethod.Post, new { @class = "form-group" }))
+{
+
+    <div>
+        <label>Kategori Adı</label>
+        @Html.TextBoxFor(m => m.QuestionCategoryName, new { @class = "form-control", name = "CategoryName" })
+    </div>
+    <br />
+    <button class="btn btn-success" type="submit">Kategori Ekle</button>
+}

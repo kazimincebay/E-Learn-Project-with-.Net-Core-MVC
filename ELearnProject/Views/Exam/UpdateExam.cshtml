@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Concrete
+@model Exam
+@{
+    ViewData["Title"] = "Sınav Güncelle";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+@using (Html.BeginForm("UpdateExam", "Exam", FormMethod.Post, new { @class = "form-group" }))
+{
+
+    <div>
+        <label>Sınav Adı</label>
+        @Html.TextBoxFor(m => m.ExamName, new { @class = "form-control", name = "ExamName" })
+    </div>
+    <br />
+    <div>
+        <label>Sınav Süresi</label>
+        @Html.TextBoxFor(m => m.ExamDuration, new { @class = "form-control", name = "ExamDuration" })
+    </div>
+    <br />
+    <div>
+        <label>Sınav Kategorisi</label>
+        @Html.DropDownListFor(m => m.ExamCategory, (List<SelectListItem>)ViewBag.c, new { @class = "form-control", name = "examCategory" })
+    </div>
+    <br />
+    <div>
+        <label>Sınav Açıklaması</label>
+        @Html.TextBoxFor(m => m.ExamDescription, new { @class = "form-control", name = "ExamDescription" })
+    </div>
+    <br />
+    <div>
+        <label>Sınav Başarı Puanı</label>
+        @Html.TextBoxFor(m => m.ExamSuccessPoint, new { @class = "form-control", name = "ExamSuccessPoint" })
+    </div>
+    <br />
+    <button class="btn btn-success" type="submit">Sınav Güncelle</button>
+}

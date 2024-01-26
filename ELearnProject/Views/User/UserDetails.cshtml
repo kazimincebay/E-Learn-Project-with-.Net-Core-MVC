@@ -1,0 +1,37 @@
+﻿@using EntityLayer.Concrete
+@model MyViewModel2
+@{
+    ViewData["Title"] = "Kullanıcı Detay İşlemleri";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Kullanıcı Detay işlemleri burada yapılacak</p>
+
+<table class="table table-bordered">
+    <tr>
+        <td><label>Kullanıcı Id</label></td>
+        <td colspan="2">@Model.user.UserId</td>
+    </tr>
+    <tr>
+        <td><label>Kullanıcı Adı</label></td>
+        <td colspan="2">@Model.user.UserName</td>
+    </tr>
+    <tr class="text-center">
+        <td colspan="3"><label>Atanan Sınavlar</label></td>
+    </tr>
+    <tr class="text-center">
+        <th>Sınav Adı</th>
+        <th>Başlangıç Tarihi</th>
+        <th>Bitiş Tarihi</th>
+    </tr>
+    @foreach (var item in Model.userandexam)
+    {
+        <tr class="text-center">
+            <td><label>@item.ExamId</label></td>
+            <td><label>@item.startDate</label></td>
+            <td><label>@item.endDate</label></td>
+        </tr>
+    }
+
+
+</table>

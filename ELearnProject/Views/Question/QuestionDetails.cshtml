@@ -1,0 +1,66 @@
+﻿@using EntityLayer.Concrete
+@model Question
+@{
+    ViewData["Title"] = "Soru Detay";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+
+
+
+
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <td><label>Soru Id</label></td>
+        <td>@Model.QuestionId</td>
+    </tr>
+    <tr>
+        <td><label>Soru Kategorisi</label></td>
+        <td>@Model.QuestionCategory</td>
+    </tr>
+    <tr>
+        <td><label>Soru Tipi</label></td>
+        <td>@Model.QuestionType</td>
+    </tr>
+    <tr>
+        <td><label>Soru Metni</label></td>
+        <td>@Model.QuestionText</td>
+    </tr>
+    <tr>
+        <td><label>Şık 1</label></td>
+        <td>@ViewBag.choice1</td>
+    </tr>
+    <tr>
+        <td><label>Şık 2</label></td>
+        <td>@ViewBag.choice2</td>
+    </tr>
+    <tr>
+        <td><label>Şık 3</label></td>
+        <td>@ViewBag.choice3</td>
+    </tr>
+    <tr>
+        <td><label>Şık 4</label></td>
+        <td>@ViewBag.choice4</td>
+    </tr>
+    <tr>
+        <td><label>Şık 5</label></td>
+        <td>@ViewBag.choice5</td>
+    </tr>
+    <tr>
+        <td><label>Doğru Cevap</label></td>
+        <td>@ViewBag.correctAnswer</td>
+    </tr>
+    
+
+
+
+
+
+</table>
+
+

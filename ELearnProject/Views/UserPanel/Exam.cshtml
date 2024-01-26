@@ -1,0 +1,98 @@
+﻿@using EntityLayer.Concrete
+@model MyViewModel
+@{
+    ViewData["Title"] = "Sınav Ekranı";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+<p>Sınav Süreniz @ViewBag.examDuration Dakikadır.</p>
+
+<div>Kalan Süreniz <div id="countdown"></div></div>
+
+
+<br />
+<br />
+
+
+
+
+
+<p>@Model.question.QuestionText</p>
+
+<div>
+    <input type="radio" class="radiobutton" name="choice" />
+    <label>@Model.choice.Choice1</label>
+</div>
+<br />
+<div>
+    <input type="radio" class="radiobutton" name="choice" />
+    <label>@Model.choice.Choice2</label>
+</div>
+<br />
+<div>
+    <input type="radio" class="radiobutton" name="choice" />
+    <label>@Model.choice.Choice3</label>
+</div>
+<br />
+<div>
+    <input type="radio" class="radiobutton" name="choice" />
+    <label>@Model.choice.Choice4</label>
+</div>
+<br />
+<div>
+    <input type="radio" class="radiobutton" name="choice" />
+    <label>@Model.choice.Choice5</label>
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var targetMinutes = @ViewBag.examDuration; // 5 dakika
+
+    // Hedef tarih ve saatini oluşturun
+    var targetDate = new Date();
+    targetDate.setMinutes(targetDate.getMinutes() + targetMinutes);
+
+    // setInterval ile belirli aralıklarla geri sayım güncellenir
+    var countdownInterval = setInterval(function () {
+        // Şu anki tarihi al
+        var currentDate = new Date();
+
+        // Hedef tarih ve şu anki tarih arasındaki farkı hesapla
+        var timeDifference = targetDate - currentDate;
+
+        // Farkı saniyelere çevir
+        var seconds = Math.floor(timeDifference / 1000);
+
+        // Geri sayım tamamlandıysa clearInterval ile interval'ı durdur
+        if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('countdown').innerHTML = 'Geri sayım tamamlandı!';
+        } else {
+            // Geri sayımı ekrana yazdır
+            var minutes = Math.floor(seconds / 60);
+            var remainingSeconds = seconds % 60;
+
+            document.getElementById('countdown').innerHTML = minutes + ' dakika ' + remainingSeconds + ' saniye';
+        }
+    }, 1000);
+
+
+
+</script>

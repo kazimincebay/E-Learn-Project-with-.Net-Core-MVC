@@ -1,0 +1,150 @@
+﻿@using EntityLayer.Concrete
+@model Question
+@{
+    ViewData["Title"] = "Soru Ekleme";
+}
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm("AddQuestion", "Question", FormMethod.Post, new { @class = "form-group", name = "addQuestion" }))
+{
+    <div class="form-group">
+        <label>Soru Kategorisi</label>
+        @Html.DropDownListFor(x => x.QuestionCategory, (List<SelectListItem>)ViewBag.QuestionCategory, new { @class = "form-control", name = "QuestionCategory" })
+    </div>
+    <br />
+    <div>
+        <label>Soru Metni</label>
+        @Html.TextBoxFor(x => x.QuestionText, new { @class = "form-control", name = "QuestionText", required = "required" })
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Soru Tipi</label>
+        <br />
+        @Html.RadioButtonFor(x => x.QuestionType, "CoktanSecmeli", new { name = "QuestionType", @class = "QuestionType", @onchange = "getRadioButtonValue()", required = "required" })
+        <label>Çoktan Seçmeli</label>
+        @Html.RadioButtonFor(x => x.QuestionType, "Aciklamali", new { name = "QuestionType", @class = "QuestionType", @onchange = "getRadioButtonValue()", required = "required" })
+        <label>Açıklamalı</label>
+    </div>
+    <br />
+    <div id="choicesarea">
+        <div id="choices"></div>
+    </div>
+
+
+
+    <button class="btn btn-success" type="submit">Soru Ekle</button>
+}
+
+<noscript>Tarayıcınızda Javascripti Etkinleştirmeniz Gerekmektedir.</noscript>
+<script>
+
+    function getRadioButtonValue() {
+        var questionType = document.forms.addQuestion.elements.QuestionType.value
+
+        if (questionType == "CoktanSecmeli") {
+
+            // bu kısımda soru tipi değişince çoktan seçmeli seçildi ise eklenen butonu silme işlemi
+
+            for (var i = 1; document.getElementById("choicesarea").children.length; i++) {
+                document.getElementById("choicesarea").lastChild.remove();
+            }
+
+            var Number = 1;
+            correctAnswer = "";
+            // Çoktan Seçmeli sorular için şık ekle butonu
+
+            for (var j = 1; j <= 5; j++) {
+                const choicediv = document.createElement('div');
+                choicediv.id = "choicediv" + Number
+                document.getElementById("choicesarea").appendChild(choicediv);
+
+                const ChoiceLabel = document.createElement('label');
+                ChoiceLabel.textContent = "Şık " + Number;
+                document.getElementById("choicediv" + Number).appendChild(ChoiceLabel)
+
+                const ChoiceTextBox = document.createElement('input');
+                ChoiceTextBox.type = "text";
+                ChoiceTextBox.className = "form-control";
+                ChoiceTextBox.name = "Choice" + Number
+                ChoiceTextBox.required = true;
+                document.getElementById("choicediv" + Number).appendChild(ChoiceTextBox);
+
+                const correctLabel = document.createElement('label');
+                correctLabel.textContent = "Doğru Cevap";
+                document.getElementById("choicediv" + Number).appendChild(correctLabel);
+
+                const correctanswer = document.createElement('input');
+                correctanswer.type = "hidden";
+                correctanswer.value = correctAnswer;
+                correctanswer.name = "correctAnswer"
+
+                const RadioButton = document.createElement('input');
+                RadioButton.type = "radio";
+                RadioButton.style = "margin-left:10px;";
+                RadioButton.id = Number;
+                RadioButton.onclick = onclickCheckbox;
+                RadioButton.value =Number;
+                RadioButton.name = "correctanswer";
+                document.getElementById("choicediv" + Number).appendChild(RadioButton);
+                Number++
+            }
+
+
+
+
+
+            function onclickCheckbox() {
+                for (var i = 1; i < 6; i++) {
+                    if (document.getElementById([i]).checked) {
+                        if (document.getElementsByName("Choice" + [i])[0].value != "") {
+                            console.log(document.getElementById([i]).value);
+                            correctAnswer = document.getElementsByName("Choice" + [i])[0].value
+                        }
+                        
+                    }
+                    // console.log(correctAnswer = document.getElementsByName("Choice" + [i]));
+                    // console.log(correctAnswer = document.getElementsByName("Choice" + [i])[0]);
+                    
+                }
+                
+            }
+
+
+            //console.log(document.getElementsByName("correctanswer"));
+
+
+
+
+        }
+    
+    if (questionType == "Aciklamali") {
+
+
+        //soru tipi değişince çoktan seçmeli seçildi ise eklenen butonu silme işlemi
+
+        for (var i = 1; document.getElementById("choicesarea").children.length; i++) {
+            document.getElementById("choicesarea").lastChild.remove();
+        }
+        // document.getElementById("choicesarea").lastChild.remove();
+
+
+
+        // Açıklamalı sorunun cevabı için label ve textbox oluşturma
+        const answerLabel = document.createElement("label");
+        answerLabel.textContent = "Cevap"
+        document.getElementById("choicesarea").appendChild(answerLabel);
+
+        const answerTextInput = document.createElement("input");
+        answerTextInput.type = "text";
+        answerTextInput.name = "Answer";
+        answerTextInput.required = true;
+        answerTextInput.className = "form-control";
+        document.getElementById("choicesarea").appendChild(answerTextInput);
+    }
+    }
+
+
+
+
+
+</script>    

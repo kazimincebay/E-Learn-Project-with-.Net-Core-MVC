@@ -1,0 +1,34 @@
+﻿@using EntityLayer.Concrete
+@model List<Question>
+@{
+    ViewData["Title"] = "Soru İşlemleri";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Soru Id</th>
+        <th>Soru Yazısı</th>
+        <th>Soru Tipi</th>
+        <th>Soru Kategori Id</th>
+        <th>Detay</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.QuestionId</td>
+            <td>@item.QuestionText</td>
+            <td>@item.QuestionType</td>
+            <td>@item.QuestionCategory</td>
+            <td><a href="/Question/QuestionDetails/@item.QuestionId" class="btn btn-info">Detay</a></td>
+            <td><a href="/Question/UpdateQuestion/@item.QuestionId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Question/DeleteQuestion/@item.QuestionId" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Question/AddQuestion" class="btn btn-primary">Yeni Soru Ekle</a>

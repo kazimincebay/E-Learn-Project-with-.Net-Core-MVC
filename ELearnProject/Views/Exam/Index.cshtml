@@ -1,0 +1,36 @@
+﻿@using EntityLayer.Concrete
+@model List<Exam>
+
+@{
+    ViewData["Title"] = "Sınav İşlemleri";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Sınav Id</th>
+        <th>Sınav Adı</th>
+        <th>Sınav Süresi(Dakika)</th>
+        <th>Sınav Kategori Id</th>
+        <th>Sınav Açıklaması</th>
+        <th>Sınav Başarı Puanı</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ExamId</td>
+            <td>@item.ExamName</td>
+            <td>@item.ExamDuration</td>
+            <td>@item.ExamCategory</td>
+            <td>@item.ExamDescription</td>
+            <td>@item.ExamSuccessPoint</td>
+            <td><a href="/Exam/UpdateExam/@item.ExamId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Exam/DeleteExam/@item.ExamId" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+    
+
+</table>
+<a href="/Exam/AddExam/" class="btn btn-primary">Yeni Sınav Ekle</a>

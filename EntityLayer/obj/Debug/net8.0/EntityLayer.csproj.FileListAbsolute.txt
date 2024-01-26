@@ -1,0 +1,11 @@
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\bin\Debug\net8.0\EntityLayer.deps.json
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\bin\Debug\net8.0\EntityLayer.dll
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\bin\Debug\net8.0\EntityLayer.pdb
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\obj\Debug\net8.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfo.cs
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\obj\Debug\net8.0\EntityLayer.dll
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
+C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll

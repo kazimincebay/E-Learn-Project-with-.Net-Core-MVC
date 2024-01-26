@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+@{
+    ViewData["Title"] = "Sınav Kategorisi İşlemleri";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori Id</th>
+        <th>Kategori Ad</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryId</td>
+            <td>@item.CategoryName</td>
+            <td><a href="/Category/UpdateCategory/@item.CategoryId/" class="btn btn-warning">Güncelle</a> </td>
+            <td><a href="/Category/DeleteCategory/@item.CategoryId/" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+<a href="/Category/AddCategory/" class="btn btn-primary">Yeni Kategori Ekle</a>

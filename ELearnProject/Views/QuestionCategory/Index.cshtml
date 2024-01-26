@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete
+@model List<QuestionCategory>
+@{
+    ViewData["Title"] = "Soru Kategorisi İşlemleri";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori Id</th>
+        <th>Kategori Adı</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.QuestionCategoryId</td>
+            <td>@item.QuestionCategoryName</td>
+            <td><a href="QuestionCategory/UpdateQuestionCategory/@item.QuestionCategoryId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="QuestionCategory/DeleteQuestionCategory/@item.QuestionCategoryId" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+
+
+</table>
+<a href="/QuestionCategory/AddQuestionCategory/" class="btn btn-primary">Yeni Soru Kategorisi Ekle</a>

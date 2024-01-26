@@ -1,0 +1,27 @@
+﻿@using EntityLayer.Concrete
+@model User
+@{
+
+    ViewData["Title"] = "Giriş Yap";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+@using (Html.BeginForm("Login", "UserPanel", FormMethod.Post, new { @class = "form-group" }))
+{
+
+    <div>
+        <label>Kullanıcı Adı</label>
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", name = "UserName" })
+    </div>
+    <br />
+    <div>
+        <label>Şifre</label>
+        @Html.PasswordFor(m => m.UserPassword, new { @class = "form-control", name = "UserPassword" })
+    </div>
+    <br />
+    <button class="btn btn-success" type="submit">Giriş Yap</button>
+}
+
+

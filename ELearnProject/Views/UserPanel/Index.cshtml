@@ -1,0 +1,68 @@
+﻿@using EntityLayer.Concrete
+@model MyViewModel2
+@{
+    ViewData["Title"] = "Kullanıcı Paneli";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+@if (ViewBag.isLoggedin == false)
+{
+    <a href="/UserPanel/Register/" class="btn btn-primary">Kayıt Ol</a>
+    <a href="/UserPanel/Login/" class="btn btn-primary">Giriş Yap</a>
+}
+@if (ViewBag.isLoggedin == true)
+{
+    <a href="/UserPanel/Logout/" class="btn btn-primary">Çıkış Yap</a>
+
+    <table class="table table-bordered">
+        <tr>
+            <td><label>Kullanıcı Id</label></td>
+            <td colspan="3">@Model.user.UserId</td>
+        </tr>
+        <tr>
+            <td><label>Kullanıcı Adı</label></td>
+            <td colspan="3">@Model.user.UserName</td>
+        </tr>
+        <tr class="text-center">
+            <td colspan="4">Atanmış Sınavlar</td>
+        </tr>
+        <tr class="text-center">
+            <th>Sınav Adı</th>
+            <th>Başlangıç Tarihi</th>
+            <th>Bitiş Tarihi</th>
+            <th>Başlat</th>
+        </tr>
+        
+        @foreach (var item in Model.userandexam)
+        {
+            <tr class="text-center">
+                <td>@item.ExamId</td>
+                <td id="startdate">@item.startDate</td>
+                <td id="enddate">@item.endDate</td>
+                <td><a href="/UserPanel/Exam/@item.ExamId" id="testbutton" class="btn btn-success">Başlat</a></td>
+            </tr>
+        }
+    </table>
+}
+
+
+
+<script>
+    /*
+    console.log(document.getElementById("startdate").innerHTML)
+    console.log(document.getElementById("enddate").innerHTML)
+    var currentDate = new Date().toLocaleString('tr-TR');
+    console.log(currentDate);
+    var startDate = new Date(document.getElementById("startdate").innerHTML);
+    var endDate = new Date(document.getElementById("enddate").innerHTML);
+    // Tarihler arasında kontrol yap
+    if (currentDate > startDate && currentDate < endDate) {
+        console.log('belirli tarih aralığında.');
+    } else {
+        console.log('Şu an belirli tarih aralığında değil.');
+        var testbutton = document.getElementById("testbutton").disabled = true;
+    }
+    */
+
+</script>

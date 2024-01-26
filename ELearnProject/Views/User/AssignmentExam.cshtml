@@ -1,0 +1,35 @@
+﻿@using EntityLayer.Concrete
+@model MyViewModel2
+@{
+    ViewData["Title"] = "Sınav Atama İşlemleri";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Sınav Atama işlemleri burada yapılacak</p>
+
+@using (Html.BeginForm("AssignmentExam", "User", FormMethod.Post, new { @class = "form-group", name = "AssignmentExam" }))
+{
+    <div>
+        <label>Kullanıcı Id</label>
+        @Html.TextBoxFor(x => x.user.UserId, new { @class = "form-control", name = "UserId", disabled = true })
+        @Html.HiddenFor(x => x.user.UserId, new { @class = "form-control", name = "UserId" })
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Soru Kategorisi</label>
+        @Html.DropDownListFor(x => x.userandExam.ExamId, (List<SelectListItem>)ViewBag.Exams, new { @class = "form-control", name = "ExamId" })
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Başlangıç Tarihi</label>
+        @Html.TextBoxFor(x => x.userandExam.startDate, new { @class = "form-control", name = "startDate", type = "datetime-local" })
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Bitiş Tarihi</label>
+        @Html.TextBoxFor(x => x.userandExam.endDate, new { @class = "form-control", name = "endDate", type = "datetime-local"})
+    </div>
+    <br />
+    <button class="btn btn-success" type="submit">Sınav Ata</button>
+
+}

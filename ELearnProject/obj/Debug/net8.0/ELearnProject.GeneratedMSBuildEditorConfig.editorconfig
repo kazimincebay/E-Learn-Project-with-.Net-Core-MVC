@@ -1,0 +1,127 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ELearnProject
+build_property.RootNamespace = ELearnProject
+build_property.ProjectDir = C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\ELearnProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\kazim\OneDrive\Belgeler\GitHub\Elearn\ELearnProject
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Category/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Category/UpdateCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Exam/AddExam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxBZGRFeGFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Exam/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Exam/UpdateExam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxVcGRhdGVFeGFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/QuestionCategory/AddQuestionCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25DYXRlZ29yeVxBZGRRdWVzdGlvbkNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/QuestionCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25DYXRlZ29yeVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/QuestionCategory/UpdateQuestionCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25DYXRlZ29yeVxVcGRhdGVRdWVzdGlvbkNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Question/AddQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cQWRkUXVlc3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Question/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Question/QuestionDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cUXVlc3Rpb25EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Question/UpdateQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25cVXBkYXRlUXVlc3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/UserPanel/Exam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclBhbmVsXEV4YW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/UserPanel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclBhbmVsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/UserPanel/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclBhbmVsXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/UserPanel/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclBhbmVsXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/UserPanel/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclBhbmVsXFJlc3VsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/User/AssignmentExam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBc3NpZ25tZW50RXhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/User/UserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kazim/OneDrive/Belgeler/GitHub/Elearn/ELearnProject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9xjk8vk2tj

@@ -1,0 +1,79 @@
+﻿@using EntityLayer.Concrete
+@model MyViewModel
+@{
+    ViewData["Title"] = "Soru Güncelleme";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+@using (Html.BeginForm("UpdateQuestion", "Question", FormMethod.Post, new { @class = "form-group" }))
+{
+    <div>
+        <label>Soru ID</label>
+        @Html.TextBoxFor(m => m.question.QuestionId, new { @class = "form-control", name = "QuestionId", disabled = true })
+        @Html.HiddenFor(m => m.question.QuestionId, new { @class = "form-control", name = "QuestionId" })
+    </div>
+    <div>
+        <label>Soru Metni</label>
+        @Html.TextBoxFor(m => m.question.QuestionText, new { @class = "form-control", name = "QuestionText" })
+    </div>
+    <br />
+    <div>
+        <label>Sınav Kategorisi</label>
+        @Html.DropDownListFor(m => m.question.QuestionCategory, (List<SelectListItem>)ViewBag.QuestionCategory, new { @class = "form-control", name = "QuestionCtg" })
+    </div>
+    <br />
+   
+    @if (Model.question.QuestionType == "Aciklamali")
+        {
+            <div>
+                <label>Doğru Cevap</label>
+            @Html.TextBoxFor(m => m.choice.CorrectAnswer, new { @class = "form-control", name = "CorrectAnswer" })
+            </div>
+            <br />
+            @Html.HiddenFor(m => m.question.QuestionType, new { @class = "form-control", name = "QuestionType" })
+        
+        }
+    @if (Model.question.QuestionType == "CoktanSecmeli")
+    {
+        <div>
+            <label>Şık 1</label>
+            @Html.TextBoxFor(m => m.choice.Choice1, new { @class = "form-control", name = "Choice1" })
+        </div>
+        <br />
+        <div>
+            <label>Şık 2</label>
+            @Html.TextBoxFor(m => m.choice.Choice2, new { @class = "form-control", name = "Choice2" })
+        </div>
+        <br />
+        <div>
+            <label>Şık 3</label>
+            @Html.TextBoxFor(m => m.choice.Choice3, new { @class = "form-control", name = "Choice3" })
+        </div>
+        <br />
+        <div>
+            <label>Şık 4</label>
+            @Html.TextBoxFor(m => m.choice.Choice4, new { @class = "form-control", name = "Choice4" })
+        </div>
+        <br />
+        <div>
+            <label>Şık 5</label>
+            @Html.TextBoxFor(m => m.choice.Choice5, new { @class = "form-control", name = "Choice5" })
+        </div>
+        <br />
+        <div>
+            <label>Doğru Cevap</label>
+            @Html.TextBoxFor(m => m.choice.CorrectAnswer, new { @class = "form-control", name = "CorrectAnswer" })
+        </div>
+        <br />
+            @Html.HiddenFor(m => m.question.QuestionType, new { @class = "form-control", name = "QuestionType" })
+       
+    }
+
+    <button class="btn btn-success" type="submit">Soru Güncelle</button>
+
+
+
+
+}
